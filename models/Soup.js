@@ -7,6 +7,7 @@ const Mixed = Schema.Types.Mixed;
 var soupSchema = Schema( {
     name: String,
     season: String,
+    origin: String,
     description: String,
     score: Number,
     ratings: Number,

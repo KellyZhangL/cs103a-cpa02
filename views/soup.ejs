@@ -1,0 +1,39 @@
+<div class="bg-light m-5 p-2 border border-primary border-2">
+    <div class="">
+        <span>
+            <%= soup.season %> 
+            <%= soup.origin %> 
+            <%= soup.ratings %> 
+            <%= soup.vegetarian %> 
+            <%= soup.vegan %> 
+        </span>
+        <strong><%= soup.name %></strong>
+        
+    </div>
+    <div class="mb-1">
+        <%=soup.instructor[0] %>
+        <%=course.instructor[1] %>
+        (<%=course.instructor[2] %>)
+    </div>
+    <div><a href="/addSoup/<%= soup['_id'] %>">(add to favorite soups)</a></div>
+    <div class="mb-1">
+       Ratings: <%=soup.ratings %>,
+       : <%= course.waiting %>
+       <br>
+       Times: <%= course.strTimes %>
+    </div>
+    <div class="">
+        <em><%=course.details %></em>
+    </div>
+    <div class="p-3">
+        <%=soup.description %>
+    </div>
+
+</div>
+
+<hr>
+
+<pre>
+    <%= JSON.stringify(course,null,5) %>
+</pre>
+-->
