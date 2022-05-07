@@ -2,38 +2,45 @@
     <div class="">
         <span>
             <strong><%= soup.name %></strong>
-            <%= soup.season %> 
-            <%= soup.origin %> 
-            <%= soup.ratings %> 
-            <%= soup.vegetarian %> 
-            <%= soup.vegan %> 
         </span>
-        
     </div>
+    <br>
+
     <div class="mb-1">
-        <%=soup.instructor[0] %>
-        <%=course.instructor[1] %>
-        (<%=course.instructor[2] %>)
+        Season: <%= soup.season %>
+        <br>
+        Cultural Origins: <%= soup.origin %>
+        <br>
+        Soup Score: <%= soup.score %>
+        <br>
+        Vegetarian? <%= soup.vegetarian %>,
+        Vegan? <%= soup.vegan %>
     </div>
-    <div><a href="/addSoup/<%= soup['_id'] %>">(add to favorite soups)</a></div>
-    <div class="mb-1">
-       Ratings: <%=soup.ratings %>,
-       : <%= course.waiting %>
-       <br>
-       Times: <%= course.strTimes %>
-    </div>
-    <div class="">
-        <em><%=course.details %></em>
-    </div>
+    <br>
     <div class="p-3">
-        <%=soup.description %>
+        <em><%=soup.description %></em>
     </div>
+    <br>
+    <div class="mb-1">
+        <p>Ingredients</p>
+        <ol>
+            <% for (const ingredient in soup.ingredients) { %>
+                <li>
+                    <%= ingredient %>
+                </li>
+            <% } %>
+        </ol>
+    </div>
+    <div>
+        <p>Recipe</p>
+        <ol>
+            <% for (const number in soup.recipe) { %>
+                <li>
+                    <%= soup.recipe[number] %>
+                </li>
+            <% } %>
+        </ol>
+    </div>
+    <div><a href="/addSoup/<%= soup['_id'] %>">(Add to Favorite Soups)</a></div>
 
 </div>
-
-<hr>
-
-<pre>
-    <%= JSON.stringify(course,null,5) %>
-</pre>
--->
