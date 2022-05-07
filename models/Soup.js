@@ -13,6 +13,7 @@ var soupSchema = Schema( {
     ratings: Number,
     vegetarian: Boolean,
     vegan: Boolean,
+    ingredients: Mixed,
     recipe: Mixed,
     credits: Mixed,
     url: String,
