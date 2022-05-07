@@ -1,6 +1,6 @@
 # CPA02: Soup Recipe Blog
 
-This web app is
+This website is a soup recipe blog with hundreds of soups to look through. You can search for soups by season, culture of origin, whether the soup is vegetarian or vegan, and by overall ratings. Each soup also has my personal score, as well as where I found each recipe. Users can create an account on this site and save their favorite soup recipes. In the future, I hope to implement a feature to allow users to add their own comments and ratings to each soup recipe, as well as a "Would Try Again" button.
 
 ## Motivation 
 A large fraction of software development involves designing, implementing, deploying, and monitoring interactive database backed web applications.  PA03 gave you some experience making modifications to such an application, but it will help your future career to have an app that you personally have developed, starting from the PA03 base.
