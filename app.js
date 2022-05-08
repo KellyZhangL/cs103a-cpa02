@@ -218,33 +218,39 @@ app.get('/soups/show/:soupId',
   }
 )
 
-app.get('/courses/byInst/:email',
-  // show a list of all courses taught by a given faculty
+app.post('/soups/bySeason',
+  // show list of soups with a given season
   async (req,res,next) => {
-    const email = req.params.email+"@brandeis.edu";
-    const courses = await Course.find({instructor:email,independent_study:false})
-    //res.json(courses)
-    res.locals.courses = courses
-    res.render('courselist')
-  } 
-)
-
-app.post('/courses/byInst',
-  // show courses taught by a faculty send from a form
-  async (req,res,next) => {
-    const email = req.body.email+"@brandeis.edu";
-    const courses = 
-       await Course
-               .find({instructor:email,independent_study:false})
-               .sort({term:1,num:1,section:1})
-    //res.json(courses)
-    res.locals.courses = courses
-    res.locals.strTimes = courses.strTimes
-    res.render('courselist')
+    const {season} = req.body;
+    const soups = await Soup.find({season: {'$regex': season}}).sort({score: 1})    
+    res.locals.soups = soups
+    res.render('souplist')
   }
 )
 
-app.post('/courses/byKeyword',
+// vegetarian
+app.post('/soups/byVegetarian',
+  // show list of soups that are vegetarian or not
+  async (req,res,next) => {
+    const {vegetarian} = req.body;
+    const soups = await Soup.find({vegetarian:vegetarian}).sort({score: 1})    
+    res.locals.soups = soups
+    res.render('souplist')
+  }
+)
+
+// vegan
+app.post('/soups/byVegan',
+  // show list of soups that are vegan or not
+  async (req,res,next) => {
+    const {vegan} = req.body;
+    const soups = await Soup.find({vegan:vegan}).sort({score: 1})    
+    res.locals.soups = soups
+    res.render('souplist')
+  }
+)
+
+app.post('/soups/byKeyword',
     // show list of soups with a given keyword
     async(req, res, next) => {
         const { keyword } = req.body;
@@ -255,17 +261,16 @@ app.post('/courses/byKeyword',
     }
 )
 
-app.post('/recipes/byIngr',
-  // show recipes taught by a faculty send from a form
+app.post('/soups/byIngr',
+  // show soups by ingredient send from a form
   async (req,res,next) => {
     const {ingredient} = req.body;
     const ingr = "ingredients." + ingredient
     var query = {}; // construct a empty object
     query[ingr] = {"$exists": true};
-    const recipes = await Recipe.find(query).sort({healthiness: 1})
-    //res.json(recipes)
-    res.locals.recipes = recipes
-    res.render('recipelist')
+    const soups = await Soup.find(query).sort({score: 1})
+    res.locals.soups = soups
+    res.render('souplist')
   }
 )
 
