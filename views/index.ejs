@@ -7,37 +7,51 @@
 
     <p class="p-3 m-3 border border-primary bg-light">
         Welcome to Soup Recipes and Reviews! <br>
-        This website is a soup recipe blog with hundreds of soups to look through. 
-        You can search for soups by season, culture of origin, whether the soup is vegetarian or vegan, 
-        and by overall ratings. Each soup also has my personal score, as well as where I found each recipe. 
+        This website is a soup recipe blog with soups that I have rated and reviewed. 
+        You can search for soups by season, whether the soup is vegetarian or vegan, by ingredients, 
+        and by overall ratings. Each soup also comes with the original recipe and credited with where it was found. 
         Please create an account on this site to save your favorite soup recipes (and in the near future, to add
         your own ratings and reviews!).
     </p>
     
     <% if (true || loggedIn) {%>  
         <form method="post" action="/soups/byName">
-            Show Soups by Name: 
+            Find Soups by Name: 
               <input type="text" name="name" 
                      placeholder="e.g. Wonton Soup">
             <input type="submit">
         </form>
         <br>
         <form method="post" action="/soups/bySeason">
-            Show Soups by Season: 
+            Find Soups by Season: 
               <input type="text" name="season" 
                      placeholder="e.g. Fall">
             <input type="submit">
         </form>
         <br>
-        <form method="post" action="/soups/byOrigin">
-            Show Soups by Soup Score: 
+        <form method="post" action="/soups/byScore">
+            Find Soups by Soup Score: 
             <input type="number" name="score" 
                    placeholder="e.g. 5.0">
             <input type="submit">
         </form>
         <br>
+        <form method="post" action="/soups/byVegetarian">
+            Filter by Vegetarian Soups: 
+            <input type="boolean" name="vegetarian" 
+                   placeholder="e.g. true">
+            <input type="submit">
+        </form>
+        <br>
+        <form method="post" action="/soups/byVegan">
+            Filter by Vegan Soups: 
+            <input type="boolean" name="vegan" 
+                   placeholder="e.g. true">
+            <input type="submit">
+        </form>
+        <br>
         <form method="post" action="/soups/byIngredient">
-            Show Soups by Ingredient: 
+            Find Soups by Ingredient: 
               <input type="text" name="ingredient" 
                      placeholder="e.g. Tomato">
             <input type="submit">
