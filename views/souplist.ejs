@@ -1,0 +1,43 @@
+<h1>The soup recipes are</h1>
+<hr>
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Soup Name</th>
+            <th>Soup Description</th>
+            <th>Ingredients Needed</th>
+            <th>Recipe Instructions</th>
+        </tr>
+    </thead>
+    <tbody></tbody>
+    <% for (soup of soups) { %>
+        const season = soup.season;
+      <tr class="mb-2"> 
+        <td>
+            <a href="/soups/show/<%= soup._id %>">
+                <strong><%=  soup.name %></strong>
+                (Soup Score: <%= soup.score %>)
+            </a>
+        </td>
+        <td>
+            <ol>
+                <% for (const number in soup.recipe) { %>
+                    <li>
+                        <%= soup.recipe[number] %>
+                    </li>
+                <% } %>
+            </ol>
+        </td>
+        <td>
+            <ol>
+                <% for (const ingredient in soup.ingredients) { %>
+                    <li>
+                        <%= ingredient %>
+                    </li>
+                <% } %>
+            </ol>
+        </td>
+    </tr>
+    <% } %>
+    </tbody>
+</table>

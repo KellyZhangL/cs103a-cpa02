@@ -7,14 +7,13 @@ const Mixed = Schema.Types.Mixed;
 var soupSchema = Schema( {
     name: String,
     season: String,
-    origin: String,
     description: String,
     score: Number,
     vegetarian: Boolean,
     vegan: Boolean,
     ingredients: Mixed,
     recipe: Mixed,
-    credits: Mixed,
+    credits: String,
     url: String,
 } );
 

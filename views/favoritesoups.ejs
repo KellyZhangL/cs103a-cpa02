@@ -1,0 +1,30 @@
+<ul>
+    <div class="d-flex flex-wrap overflow-scroll">
+        <% for (soup of soups){%>
+            <div class="p-3 m-3 border border-primary bg-light w-25">
+                <a href="/favoritesoups/remove/<%= soup._id %>">X</a>
+                <strong><a href="/soups/show/<%= soup._id %>"><%= soup.name %></a></strong>
+                <br>
+                <%= soup.
+                <div class ="p-3 m-3 border border-primary bg-light">
+                    Ingredients: 
+                    <br>
+                    <br>
+                    <ol>
+                        <% for (const ingredient in soup.ingredients) { %>
+                            <li><%= ingredient %></li>
+                        <% } %>
+                    </ol>
+                </div>
+                <br>
+                Description: <%= soup['description'] %>
+                <td>
+                    </br>
+                    Soup Season: <%= soup['season'] %>
+                    </br>
+                    Soup Score: <%= soup['score'] %>
+                </td>
+            </div>
+        <% } %>
+    </div>
+</ul>

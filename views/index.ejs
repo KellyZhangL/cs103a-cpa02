@@ -10,8 +10,8 @@
         This website is a soup recipe blog with hundreds of soups to look through. 
         You can search for soups by season, culture of origin, whether the soup is vegetarian or vegan, 
         and by overall ratings. Each soup also has my personal score, as well as where I found each recipe. 
-        Please create an account on this site to save your favorite soup recipes and (in the near future), add
-        your own ratings and reviews.
+        Please create an account on this site to save your favorite soup recipes (and in the near future, to add
+        your own ratings and reviews!).
     </p>
     
     <% if (true || loggedIn) {%>  
@@ -30,9 +30,9 @@
         </form>
         <br>
         <form method="post" action="/soups/byOrigin">
-            Show Soups by Cultural Origin: 
-            <input type="text" name="origin" 
-                   placeholder="e.g. Chinese">
+            Show Soups by Soup Score: 
+            <input type="number" name="score" 
+                   placeholder="e.g. 5.0">
             <input type="submit">
         </form>
         <br>
@@ -43,6 +43,6 @@
             <input type="submit">
         </form>
         <br>
-        <a href="/favRecipes/show">Show Your Favorite Soups</a>
+        <a href="/favoriteSoups/show">Show Your Favorite Soups</a>
     <% } %>
 
