@@ -245,16 +245,28 @@ app.post('/courses/byInst',
 )
 
 app.post('/courses/byKeyword',
-    // show list of courses in a given subject
+    // show list of soups with a given keyword
     async(req, res, next) => {
         const { keyword } = req.body;
         var regex = new RegExp(keyword, "gi")
-        const courses = await Course.find({name: regex}, {independent_study:false }).sort({term:1, num:1, section:1})
-        res.locals.courses = courses
-        res.locals.strTimes = courses.strTimes
-      //res.json(courses)
-        res.render('courselist')
+        const soups = await Soup.find({name: regex}).sort({score:1})
+        res.locals.soups = soups
+        res.render('souplist')
     }
+)
+
+app.post('/recipes/byIngr',
+  // show recipes taught by a faculty send from a form
+  async (req,res,next) => {
+    const {ingredient} = req.body;
+    const ingr = "ingredients." + ingredient
+    var query = {}; // construct a empty object
+    query[ingr] = {"$exists": true};
+    const recipes = await Recipe.find(query).sort({healthiness: 1})
+    //res.json(recipes)
+    res.locals.recipes = recipes
+    res.render('recipelist')
+  }
 )
 
 app.use(isLoggedIn)
