@@ -721,703 +721,206 @@
     "url": "https://thewoksoflife.com/noodle-soup-pork-pickled-greens/#recipe"
 },
 {"id": "b9yrybzm21", 
-    "name": "", 
-    "season": "",
-    "description": "",
-    "score": 0.0,
+    "name": "Anchovy kelp stock", 
+    "season": "Any",
+    "description": "All cultures rely on stock to make their soups and stews delicious. Today I’m going to show you how to make a savory Korean stock that you can use as a base in many Korean dishes. It’s a typical Korean base for soups and stews like sundubu-jjigae (spicy soft tofu stew), and noodle soup (guksu) as well as any broth that needs a tasty boost, like tteokbokki (spicy rice cake). Of course Korean cuisine also uses beef and chicken stocks too, depending on the dish, but anchovy kelp stock is the most common and the one I like the best.",
+    "score": 2,
     "vegetarian": false,
     "vegan": false,
     "ingredients": {
-        "":"",
-        "":"",
-        "":""
+        "dried anchovies":"8 large",
+        "dried kelp":"1/2 oz",
+        "Korean radish ":"8 oz",
+        "scallions": "2",
+        "onion": "3 oz",
+        "water": "12 c"
     },
     "recipe": {
-        "0": "Layer all ingredients in a serving dish.",
-        "1": "granola, homemade"
+        "0": "Heat a large pot over medium high heat and add the anchovies. Periodically stir with a wooden spoon and cook the anchovies for about 3 to 4 minutes until they smell a little nutty.",
+        "1": "Remove from the heat. Add the radish, green onion, onion, dried kelp, and water. Cover and cook for 10 minutes.",
+        "2": "Open and stir it a few times, then close. Lower the heat to medium and cook for another 30 minutes until the radish and onion turn translucent. If the radish is still not translucent after 30 minutes, add more water and cook a little longer.",
+        "3": "Remove from the heat. Strain the stock over a large bowl. Discard the cooked ingredients except for the kelp. You will get about 9 to 10 cups stock, which you can use right away or freeze for up to 3 months."
     }, 
-    "recipe_length": 1, 
-    "credits": "The Woks of Life",
-    "url": ""
+    "recipe_length": 4, 
+    "credits": "Maangchi",
+    "url": "https://www.maangchi.com/recipe/myeolchi-dasima-yuksu"
 },
-{"id": "", 
-    "name": "", 
-    "season": "",
-    "description": "",
-    "score": 0.0,
+{"id": "lu0wsfrrl4", 
+    "name": "Korean-style mapo tofu", 
+    "season": "Winter",
+    "description": "It’s a simple recipe but it looks so gorgeous when it’s placed on the dinner table! Of course it tastes so good, too: smooth tofu, firm pork bits, and vegetables with a generous amount of spicy and smoky saucy broth! Everybody at the table will be excited to scoop some of it and enjoy it mixed with warm rice!",
+    "score": 5,
+    "vegetarian": true,
+    "vegan": true,
+    "ingredients": {
+        "vegetable oil":"3 tbsp",
+        "garlic":"4",
+        "ginger":"1",
+        "gochugaru":"1 tbsp",
+        "onion": "1",
+        "mild green chili peppers": "2",
+        "scallions":"8",
+        "vegetable stock":"1 1/4 c",
+        "gochujang":"2 tbsp",
+        "soy sauce":"1 tbsp",
+        "tofu":"1 pound",
+        "potato starch":"1 tbsp",
+        "toasted sesame oil":"1 tsp"
+    },
+    "recipe": {
+        "0": "Heat up a large skillet or a pan over medium high heat. Add vegetable oil, garlic, and ginger, stirring with a wooden spoon for 1 to 2 minutes until the garlic turns light brown and crispy and the oil smells fragrant.",
+        "1": "Stir in hot pepper flakes for about 30 seconds until it bubbles and smells a little smoky.",
+        "2": "Add the onion, green chili pepper, and green onion. Stir for 1 minute until the vegetables turn slightly withered. Stir in soy sauce and hot pepper paste.",
+        "3": "Add 1 cup broth and cook for about 2 minutes until vigorously boiling.",
+        "4": "Add the tofu cubes and gently mix with a wooden spoon, careful not to break up the tofu. Cook for about 3 to 4 minutes until the tofu turns soft.",
+        "5": "While the tofu is cooking, combine the rest of the ¼ cup chicken broth and potato starch in a small bowl and mix it well. Add it to the boiling mapo tofu and gently stir it in with a wooden spoon to thicken the sauce.",
+        "6": "Remove from the heat and stir in the sesame oil. Transfer to a large shallow bowl. Serve with rice, kimchi, and a few more side dishes."
+    }, 
+    "recipe_length": 7, 
+    "credits": "Maangchi",
+    "url": "https://www.maangchi.com/recipe/korean-style-mapo-tofu"
+},
+{"id": "genbzdqzk3", 
+    "name": "Fermented soybean paste stew", 
+    "season": "Winter",
+    "description": "When a Korean mom chooses the first real meal for her baby, she chooses doenjang-jjigae (or soup made with soybean paste, doenjang-guk) with fluffy white rice. To make it go down easy she mixes the stew with the rice and feeds it to her child. Years later, when the child is grown and living far away, she makes it for them whenever they come home again, because every child has ingrained memories of mom’s doenjang-jjigae. It’s something they know and love and are always comforted with.",
+    "score": 4,
     "vegetarian": false,
     "vegan": false,
     "ingredients": {
-        "":"",
-        "":"",
-        "":""
+        "potato":"1",
+        "onion":"1",
+        "zucchini":"1",
+        "green Korean chili pepper (cheong-gochu)":"1",
+        "garlic":"4",
+        "shrimp":"4",
+        "water":"2 1/2 c",
+        "dried anchovies":"7",
+        "fermented soybean paste (doenjang)":"5 tbsp",
+        "tofu":"6 oz"
     },
     "recipe": {
-        "0": "Layer all ingredients in a serving dish.",
-        "1": "granola, homemade"
+        "0": "Combine the potato, onion, zucchini, chili pepper, garlic, and shrimp in a 1½-quart (6 cups) earthenware pot or other heavy pot.",
+        "1": "Wrap the dried anchovies in cheesecloth (or a dashi bag, a pouch for stock-making sold at a Korean grocery store), and put them into the pot with other ingredients  Add water and cover.",
+        "2": "Cook over medium-high heat for 15 minutes until it starts boiling. If you use a stainless steel pot, it will take less than 15 minutes, about 7 to 8 minutes.",
+        "3": "Stir in the soybean paste, mixing well. Cover and cook for 20 minutes longer over medium heat.",
+        "4": "Add the tofu and cook for another 3 minutes. Remove the anchovy pouch and discard.",
+        "5": "Sprinkle with the green onions and serve as a side dish to rice. Serve it directly from the pot, or transfer to a serving bowl. Everybody can eat together out of the pot, or portions can be ladled out in individual bowls for each person."
     }, 
-    "recipe_length": 1, 
-    "credits": "",
-    "url": ""
+    "recipe_length": 6, 
+    "credits": "Maangchi",
+    "url": "https://www.maangchi.com/recipe/doenjang-jjigae"
 },
-{"id": "", 
-    "name": "", 
-    "season": "",
-    "description": "",
-    "score": 0.0,
+{"id": "9g5vx19m1p", 
+    "name": "Spicy soft tofu stew with kimchi and pork belly", 
+    "season": "Winter",
+    "description": "It’s hot, spicy, filling, comforting, delicious, soft tofu stew and has many reasons to be one of the most popular items in Korean restaurants.",
+    "score": 4,
+    "vegetarian": true,
+    "vegan": false,
+    "ingredients": {
+        "dried anchovies":"8",
+        "radish":"5 oz",
+        "dried kelp":"1 6x4 piece",
+        "gochugaru":"2 tbsp",
+        "onion": "1/4 c",
+        "pork belly": "1/2 c",
+        "scallions":"1",
+        "garlic":"1",
+        "kimchi":"1/2 c",
+        "sugar":"1 tsp",
+        "salt":"1 tsp",
+        "soft tofu":"1 tube",
+        "egg": "1",
+        "toasted sesame oil":"1 tsp",
+        "vegetable oil": "1 tsp"
+    },
+    "recipe": {
+        "0": "Put dried anchovies, radish, dried kelp, and 4 cups of water in a pot. Cover and boil over medium high heat for 10 minutes until it starts boiling.",
+        "1": "Reduce the heat to low and boil another 20 minutes. Remove from the heat and strain. It will make about 2 cups of stock.",
+        "2": "Combine the hot pepper flakes and the sesame oil in a small bowl and mix well.",
+        "3": "Heat up a 3 cup earthenware pot (ttukbaegi) on the stove over medium high heat for about 3 to 4 minutes. If you use a small heavy pan or pot, it will take less.",
+        "4": "Add the vegetable oil, onion, and garlic. Stir it with a wooden spoon for 1 minute. Add the pork. Stir for 3 minutes until the pork is no longer pink.",
+        "5": "Add kimchi and keep stirring for a minute. Add ½ cup anchovy stock. Cover and cook for 7 minutes over medium heat.",
+        "6": "Add the salt and the sugar and mix well. Cut the tube of soft tofu into half and squeeze it out into the pot. Gently break up the tofu with a wooden spoon. If you want, add a few tablespoons of stock.",
+        "7": "Put the hot pepper mixture on top and spread it with the spoon.",
+        "8": "Crack the egg and put it on top, in the center of the stew. Let it bubble and sizzle for 1 minute."
+    }, 
+    "recipe_length": 9, 
+    "credits": "Maangchi",
+    "url": "https://www.maangchi.com/recipe/sundubu-jjigae"
+},
+{"id": "0hwmoj22go", 
+    "name": "Army Base Stew", 
+    "season": "Fall",
+    "description": "This dish was invented after the Korean war (1950-1953) when the American army was stationed in the city of Uijeongbu, near Seoul. They had their own food on the base, things like canned beans, meat, Spam, ham, and sausages. This food was totally new to Koreans. Eventually these ingredients made their way into surrounding area of the base and some creative Koreans made stew from them. They boiled spam, ham, sausages, and baked beans with kimchi, garlic, and hot pepper paste and flakes, creating a Korean-style stew with American ingredients.",
+    "score": 2,
     "vegetarian": false,
     "vegan": false,
     "ingredients": {
-        "":"",
-        "":"",
-        "":""
+        "dried shiitake mushrooms":"2",
+        "dried anchovies":"8",
+        "dried kelp ":"1 5x6 sheet",
+        "water":"8 c",
+        "salt":"1 tsp",
+        "garlic":"6",
+        "gochujang":"1 tbsp",
+        "gochugaru":"2 tbsp",
+        "soy sauce":"1 tsp",
+        "sugar":"1 tsp",
+        "pork belly":"1/2 pound",
+        "noodles":"2 oz",
+        "cabbage":"1 c",
+        "onion":"1/2",
+        "scallions":"2",
+        "kimchi":"1/2 c",
+        "Polish sausage":"4 oz",
+        "spam":"4 oz",
+        "instant ramen":"1 package",
+        "radish sprouts":"1 c"
     },
     "recipe": {
-        "0": "Layer all ingredients in a serving dish.",
-        "1": "granola, homemade"
+        "0": "Combine the water, anchovies, mushrooms, and kelp in a large pot. Cover and cook for 25 minutes over medium high heat. Add the pork and cook for another 10 minutes.",
+        "1": "Remove the pot from the heat. Take out the anchovies, kelp and mushrooms. Slice the mushrooms into bite size pieces. Strain the mixture of the stock and the pork into a large bowl. Put the pork into a small bowl. You will get about 6 cups of stock. Stir in the salt until dissolved.",
+        "2": "Combine the seasoning paste ingredients – garlic, hot pepper paste, hot pepper flakes, soy sauce, sugar, and water in a bowl. Mix well.",
+        "3": "Put the cabbage, onion, green onion, pork, and the mushrooms, on the bottom of the pot. Add the kimchi, and the seasoning paste over top. Add the spam, sausage, rice cake, tofu, baked beans, and cheese. Add the ramyeon and the sweet potato starch noodles.",
+        "4": "Put radish sprouts on top and add 3 cups of stock.",
+        "5": "Cook over medium high heat. Korean style is to cook at the table with a portable burner. Friends and family will be sitting around the pot, talking and laughing, and maybe drinking. You can take a bit of cooked sausage or the meat with your chopsticks as you wait for the broth to boil and the noodles to soften. If you don’t have a tabletop burner, you can cook it on the stove away from the table.",
+        "6": "When it starts boiling about 10 minutes later, stir and turn the ingredients over with tongs to cook evenly. Serve right after the noodles and ramyeon have softened. Transfer some cooked stew to individual bowls and serve. Add more stock as the broth boils down."
     }, 
-    "recipe_length": 1, 
-    "credits": "",
-    "url": ""
+    "recipe_length": 7, 
+    "credits": "Maangchi",
+    "url": "https://www.maangchi.com/recipe/budae-jjigae"
 },
-{"id": "", 
-    "name": "", 
-    "season": "",
-    "description": "",
-    "score": 0.0,
-    "vegetarian": false,
-    "vegan": false,
+{"id": "juza5l1kj6", 
+    "name": "Kimchi stew", 
+    "season": "Any",
+    "description": "I learned this recipe from a restaurant famous for kimchi-jjigae in Korea. The restaurant was always full of people eating and sweating over kimchi stew.  There was only one item on the menu, so everyone was there for the same thing: a steaming pot of spicy kimchi-jjigae, a few side dishes, and a bowl of warm rice. Customers would call out: “Please give me another bowl of rice!”",
+    "score": 5,
+    "vegetarian": true,
+    "vegan": true,
     "ingredients": {
-        "":"",
-        "":"",
-        "":""
+        "kimchi":"1 pound",
+        "kimchi brine":"1/4 c",
+        "tofu":"1/2 package",
+        "scallions":"3",
+        "onion":"1",
+        "salt":"1 tsp",
+        "sugar":"2 tsp",
+        "gochugaru":"2 tsp",
+        "gochujang":"1 tbsp",
+        "toasted sesame oil":"1 tsp",
+        "stock": "2 c"
     },
     "recipe": {
-        "0": "Layer all ingredients in a serving dish.",
-        "1": "granola, homemade"
+        "0": "Place the kimchi and kimchi brine in a shallow pot. Add onion. Slice 2 green onions diagonally and add them to the pot.",
+        "1": "Add salt, sugar, hot pepper flakes, and hot pepper paste. Drizzle sesame oil over top and add the anchovy stock",
+        "2": "Cover and cook for 10 minutes over medium high heat.",
+        "3": "Open and mix in the seasonings with a spoon. Lay the tofu over top. Cover and cook another 10 to 15 minutes over medium heat.",
+        "4": "Chop 1 green onion and put it on the top of the stew. Remove from the heat and serve right away with rice."
     }, 
-    "recipe_length": 1, 
-    "credits": "",
-    "url": ""
-},
-{"id": "", 
-    "name": "", 
-    "season": "",
-    "description": "",
-    "score": 0.0,
-    "vegetarian": false,
-    "vegan": false,
-    "ingredients": {
-        "":"",
-        "":"",
-        "":""
-    },
-    "recipe": {
-        "0": "Layer all ingredients in a serving dish.",
-        "1": "granola, homemade"
-    }, 
-    "recipe_length": 1, 
-    "credits": "",
-    "url": ""
-},
-{"id": "", 
-    "name": "", 
-    "season": "",
-    "description": "",
-    "score": 0.0,
-    "vegetarian": false,
-    "vegan": false,
-    "ingredients": {
-        "":"",
-        "":"",
-        "":""
-    },
-    "recipe": {
-        "0": "Layer all ingredients in a serving dish.",
-        "1": "granola, homemade"
-    }, 
-    "recipe_length": 1, 
-    "credits": "",
-    "url": ""
-},
-{"id": "", 
-    "name": "", 
-    "season": "",
-    "description": "",
-    "score": 0.0,
-    "vegetarian": false,
-    "vegan": false,
-    "ingredients": {
-        "":"",
-        "":"",
-        "":""
-    },
-    "recipe": {
-        "0": "Layer all ingredients in a serving dish.",
-        "1": "granola, homemade"
-    }, 
-    "recipe_length": 1, 
-    "credits": "",
-    "url": ""
-},
-{"id": "", 
-    "name": "", 
-    "season": "",
-    "description": "",
-    "score": 0.0,
-    "vegetarian": false,
-    "vegan": false,
-    "ingredients": {
-        "":"",
-        "":"",
-        "":""
-    },
-    "recipe": {
-        "0": "Layer all ingredients in a serving dish.",
-        "1": "granola, homemade"
-    }, 
-    "recipe_length": 1, 
-    "credits": "",
-    "url": ""
-},
-{"id": "", 
-    "name": "", 
-    "season": "",
-    "description": "",
-    "score": 0.0,
-    "vegetarian": false,
-    "vegan": false,
-    "ingredients": {
-        "":"",
-        "":"",
-        "":""
-    },
-    "recipe": {
-        "0": "Layer all ingredients in a serving dish.",
-        "1": "granola, homemade"
-    }, 
-    "recipe_length": 1, 
-    "credits": "",
-    "url": ""
-},
-{"id": "", 
-    "name": "", 
-    "season": "",
-    "description": "",
-    "score": 0.0,
-    "vegetarian": false,
-    "vegan": false,
-    "ingredients": {
-        "":"",
-        "":"",
-        "":""
-    },
-    "recipe": {
-        "0": "Layer all ingredients in a serving dish.",
-        "1": "granola, homemade"
-    }, 
-    "recipe_length": 1, 
-    "credits": "",
-    "url": ""
-},
-{"id": "", 
-    "name": "", 
-    "season": "",
-    "description": "",
-    "score": 0.0,
-    "vegetarian": false,
-    "vegan": false,
-    "ingredients": {
-        "":"",
-        "":"",
-        "":""
-    },
-    "recipe": {
-        "0": "Layer all ingredients in a serving dish.",
-        "1": "granola, homemade"
-    }, 
-    "recipe_length": 1, 
-    "credits": "",
-    "url": ""
-},
-{"id": "", 
-    "name": "", 
-    "season": "",
-    "description": "",
-    "score": 0.0,
-    "vegetarian": false,
-    "vegan": false,
-    "ingredients": {
-        "":"",
-        "":"",
-        "":""
-    },
-    "recipe": {
-        "0": "Layer all ingredients in a serving dish.",
-        "1": "granola, homemade"
-    }, 
-    "recipe_length": 1, 
-    "credits": "",
-    "url": ""
-},
-{"id": "", 
-    "name": "", 
-    "season": "",
-    "description": "",
-    "score": 0.0,
-    "vegetarian": false,
-    "vegan": false,
-    "ingredients": {
-        "":"",
-        "":"",
-        "":""
-    },
-    "recipe": {
-        "0": "Layer all ingredients in a serving dish.",
-        "1": "granola, homemade"
-    }, 
-    "recipe_length": 1, 
-    "credits": "",
-    "url": ""
-},
-{"id": "", 
-    "name": "", 
-    "season": "",
-    "description": "",
-    "score": 0.0,
-    "vegetarian": false,
-    "vegan": false,
-    "ingredients": {
-        "":"",
-        "":"",
-        "":""
-    },
-    "recipe": {
-        "0": "Layer all ingredients in a serving dish.",
-        "1": "granola, homemade"
-    }, 
-    "recipe_length": 1, 
-    "credits": "",
-    "url": ""
-},
-{"id": "", 
-    "name": "", 
-    "season": "",
-    "description": "",
-    "score": 0.0,
-    "vegetarian": false,
-    "vegan": false,
-    "ingredients": {
-        "":"",
-        "":"",
-        "":""
-    },
-    "recipe": {
-        "0": "Layer all ingredients in a serving dish.",
-        "1": "granola, homemade"
-    }, 
-    "recipe_length": 1, 
-    "credits": "",
-    "url": ""
-},
-{"id": "", 
-    "name": "", 
-    "season": "",
-    "description": "",
-    "score": 0.0,
-    "vegetarian": false,
-    "vegan": false,
-    "ingredients": {
-        "":"",
-        "":"",
-        "":""
-    },
-    "recipe": {
-        "0": "Layer all ingredients in a serving dish.",
-        "1": "granola, homemade"
-    }, 
-    "recipe_length": 1, 
-    "credits": "",
-    "url": ""
-},
-{"id": "", 
-    "name": "", 
-    "season": "",
-    "description": "",
-    "score": 0.0,
-    "vegetarian": false,
-    "vegan": false,
-    "ingredients": {
-        "":"",
-        "":"",
-        "":""
-    },
-    "recipe": {
-        "0": "Layer all ingredients in a serving dish.",
-        "1": "granola, homemade"
-    }, 
-    "recipe_length": 1, 
-    "credits": "",
-    "url": ""
-},
-{"id": "", 
-    "name": "", 
-    "season": "",
-    "description": "",
-    "score": 0.0,
-    "vegetarian": false,
-    "vegan": false,
-    "ingredients": {
-        "":"",
-        "":"",
-        "":""
-    },
-    "recipe": {
-        "0": "Layer all ingredients in a serving dish.",
-        "1": "granola, homemade"
-    }, 
-    "recipe_length": 1, 
-    "credits": "",
-    "url": ""
-},
-{"id": "", 
-    "name": "", 
-    "season": "",
-    "description": "",
-    "score": 0.0,
-    "vegetarian": false,
-    "vegan": false,
-    "ingredients": {
-        "":"",
-        "":"",
-        "":""
-    },
-    "recipe": {
-        "0": "Layer all ingredients in a serving dish.",
-        "1": "granola, homemade"
-    }, 
-    "recipe_length": 1, 
-    "credits": "",
-    "url": ""
-},
-{"id": "", 
-    "name": "", 
-    "season": "",
-    "description": "",
-    "score": 0.0,
-    "vegetarian": false,
-    "vegan": false,
-    "ingredients": {
-        "":"",
-        "":"",
-        "":""
-    },
-    "recipe": {
-        "0": "Layer all ingredients in a serving dish.",
-        "1": "granola, homemade"
-    }, 
-    "recipe_length": 1, 
-    "credits": "",
-    "url": ""
-},
-{"id": "", 
-    "name": "", 
-    "season": "",
-    "description": "",
-    "score": 0.0,
-    "vegetarian": false,
-    "vegan": false,
-    "ingredients": {
-        "":"",
-        "":"",
-        "":""
-    },
-    "recipe": {
-        "0": "Layer all ingredients in a serving dish.",
-        "1": "granola, homemade"
-    }, 
-    "recipe_length": 1, 
-    "credits": "",
-    "url": ""
-},
-{"id": "", 
-    "name": "", 
-    "season": "",
-    "description": "",
-    "score": 0.0,
-    "vegetarian": false,
-    "vegan": false,
-    "ingredients": {
-        "":"",
-        "":"",
-        "":""
-    },
-    "recipe": {
-        "0": "Layer all ingredients in a serving dish.",
-        "1": "granola, homemade"
-    }, 
-    "recipe_length": 1, 
-    "credits": "",
-    "url": ""
-},
-{"id": "", 
-    "name": "", 
-    "season": "",
-    "description": "",
-    "score": 0.0,
-    "vegetarian": false,
-    "vegan": false,
-    "ingredients": {
-        "":"",
-        "":"",
-        "":""
-    },
-    "recipe": {
-        "0": "Layer all ingredients in a serving dish.",
-        "1": "granola, homemade"
-    }, 
-    "recipe_length": 1, 
-    "credits": "",
-    "url": ""
-},
-{"id": "", 
-    "name": "", 
-    "season": "",
-    "description": "",
-    "score": 0.0,
-    "vegetarian": false,
-    "vegan": false,
-    "ingredients": {
-        "":"",
-        "":"",
-        "":""
-    },
-    "recipe": {
-        "0": "Layer all ingredients in a serving dish.",
-        "1": "granola, homemade"
-    }, 
-    "recipe_length": 1, 
-    "credits": "",
-    "url": ""
-},
-{"id": "", 
-    "name": "", 
-    "season": "",
-    "description": "",
-    "score": 0.0,
-    "vegetarian": false,
-    "vegan": false,
-    "ingredients": {
-        "":"",
-        "":"",
-        "":""
-    },
-    "recipe": {
-        "0": "Layer all ingredients in a serving dish.",
-        "1": "granola, homemade"
-    }, 
-    "recipe_length": 1, 
-    "credits": "",
-    "url": ""
-},
-{"id": "", 
-    "name": "", 
-    "season": "",
-    "description": "",
-    "score": 0.0,
-    "vegetarian": false,
-    "vegan": false,
-    "ingredients": {
-        "":"",
-        "":"",
-        "":""
-    },
-    "recipe": {
-        "0": "Layer all ingredients in a serving dish.",
-        "1": "granola, homemade"
-    }, 
-    "recipe_length": 1, 
-    "credits": "",
-    "url": ""
-},
-{"id": "", 
-    "name": "", 
-    "season": "",
-    "description": "",
-    "score": 0.0,
-    "vegetarian": false,
-    "vegan": false,
-    "ingredients": {
-        "":"",
-        "":"",
-        "":""
-    },
-    "recipe": {
-        "0": "Layer all ingredients in a serving dish.",
-        "1": "granola, homemade"
-    }, 
-    "recipe_length": 1, 
-    "credits": "",
-    "url": ""
-},
-{"id": "", 
-    "name": "", 
-    "season": "",
-    "description": "",
-    "score": 0.0,
-    "vegetarian": false,
-    "vegan": false,
-    "ingredients": {
-        "":"",
-        "":"",
-        "":""
-    },
-    "recipe": {
-        "0": "Layer all ingredients in a serving dish.",
-        "1": "granola, homemade"
-    }, 
-    "recipe_length": 1, 
-    "credits": "",
-    "url": ""
-},
-{"id": "", 
-    "name": "", 
-    "season": "",
-    "description": "",
-    "score": 0.0,
-    "vegetarian": false,
-    "vegan": false,
-    "ingredients": {
-        "":"",
-        "":"",
-        "":""
-    },
-    "recipe": {
-        "0": "Layer all ingredients in a serving dish.",
-        "1": "granola, homemade"
-    }, 
-    "recipe_length": 1, 
-    "credits": "",
-    "url": ""
-},
-{"id": "", 
-    "name": "", 
-    "season": "",
-    "description": "",
-    "score": 0.0,
-    "vegetarian": false,
-    "vegan": false,
-    "ingredients": {
-        "":"",
-        "":"",
-        "":""
-    },
-    "recipe": {
-        "0": "Layer all ingredients in a serving dish.",
-        "1": "granola, homemade"
-    }, 
-    "recipe_length": 1, 
-    "credits": "",
-    "url": ""
-},
-{"id": "", 
-    "name": "", 
-    "season": "",
-    "description": "",
-    "score": 0.0,
-    "vegetarian": false,
-    "vegan": false,
-    "ingredients": {
-        "":"",
-        "":"",
-        "":""
-    },
-    "recipe": {
-        "0": "Layer all ingredients in a serving dish.",
-        "1": "granola, homemade"
-    }, 
-    "recipe_length": 1, 
-    "credits": "",
-    "url": ""
-},
-{"id": "", 
-    "name": "", 
-    "season": "",
-    "description": "",
-    "score": 0.0,
-    "vegetarian": false,
-    "vegan": false,
-    "ingredients": {
-        "":"",
-        "":"",
-        "":""
-    },
-    "recipe": {
-        "0": "Layer all ingredients in a serving dish.",
-        "1": "granola, homemade"
-    }, 
-    "recipe_length": 1, 
-    "credits": "",
-    "url": ""
-},
-{"id": "", 
-    "name": "", 
-    "season": "",
-    "description": "",
-    "score": 0.0,
-    "vegetarian": false,
-    "vegan": false,
-    "ingredients": {
-        "":"",
-        "":"",
-        "":""
-    },
-    "recipe": {
-        "0": "Layer all ingredients in a serving dish.",
-        "1": "granola, homemade"
-    }, 
-    "recipe_length": 1, 
-    "credits": "",
-    "url": ""
-},
-{"id": "", 
-    "name": "", 
-    "season": "",
-    "description": "",
-    "score": 0.0,
-    "vegetarian": false,
-    "vegan": false,
-    "ingredients": {
-        "":"",
-        "":"",
-        "":""
-    },
-    "recipe": {
-        "0": "Layer all ingredients in a serving dish.",
-        "1": "granola, homemade"
-    }, 
-    "recipe_length": 1, 
-    "credits": "",
-    "url": ""
-},
-{"id": "", 
-    "name": "", 
-    "season": "",
-    "description": "",
-    "score": 0.0,
-    "vegetarian": false,
-    "vegan": false,
-    "ingredients": {
-        "":"",
-        "":"",
-        "":""
-    },
-    "recipe": {
-        "0": "Layer all ingredients in a serving dish.",
-        "1": "granola, homemade"
-    }, 
-    "recipe_length": 1, 
-    "credits": "",
-    "url": ""
-},
+    "recipe_length": 5, 
+    "credits": "Maangchi",
+    "url": "https://www.maangchi.com/recipe/kimchi-jjigae"
+}
 ]
