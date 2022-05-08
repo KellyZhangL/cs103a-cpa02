@@ -33,7 +33,6 @@ const soups = require('./public/data/soups.json')
 // *********************************************************** //
 
 const mongoose = require( 'mongoose' );
-//const mongodb_URI = 'mongodb://localhost:27017/cs103a_todo'
 const mongodb_URI = 'mongodb+srv://cs_sj:BrandeisSpr22@cluster0.kgugl.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
 //mongodb+srv://zhangk:<password>@cluster0.wlp4y.mongodb.net/test
 
@@ -178,101 +177,44 @@ app.get('/todo',
 )
 
 /* ************************
-  Functions needed for the course finder routes
+  Functions needed for the soup finder routes
    ************************ */
-
-function getNum(coursenum){
-  // separate out a coursenum 103A into 
-  // a num: 103 and a suffix: A
-  i=0;
-  while (i<coursenum.length && '0'<=coursenum[i] && coursenum[i]<='9'){
-    i=i+1;
-  }
-  return coursenum.slice(0,i);
-}
-
-
-function times2str(times){
-  // convert a course.times object into a list of strings
-  // e.g ["Lecture:Mon,Wed 10:00-10:50","Recitation: Thu 5:00-6:30"]
-  if (!times || times.length==0){
-    return ["not scheduled"]
-  } else {
-    return times.map(x => time2str(x))
-  }
-  
-}
-function min2HourMin(m){
-  // converts minutes since midnight into a time string, e.g.
-  // 605 ==> "10:05"  as 10:00 is 60*10=600 minutes after midnight
-  const hour = Math.floor(m/60);
-  const min = m%60;
-  if (min<10){
-    return `${hour}:0${min}`;
-  }else{
-    return `${hour}:${min}`;
-  }
-}
-
-function time2str(time){
-  // creates a Times string for a lecture or recitation, e.g. 
-  //     "Recitation: Thu 5:00-6:30"
-  const start = time.start
-  const end = time.end
-  const days = time.days
-  const meetingType = time['type'] || "Lecture"
-  const location = time['building'] || ""
-
-  return `${meetingType}: ${days.join(",")}: ${min2HourMin(start)}-${min2HourMin(end)} ${location}`
-}
-
-
 
 /* ************************
   Loading (or reloading) the data into a collection
    ************************ */
-// this route loads in the courses into the Course collection
-// or updates the courses if it is not a new collection
+// this route loads in the soups into the Soup collection
+// or updates the soups if it is not a new collection
 
 app.get('/upsertDB',
   async (req,res,next) => {
-    //await Course.deleteMany({})
-    for (course of courses){
-      const {subject,coursenum,section,term}=course;
-      const num = getNum(coursenum);
-      course.num=num
-      course.suffix = coursenum.slice(num.length)
-      course.strTimes=time2str(course.times)
-      await Course.findOneAndUpdate({subject,coursenum,section,term},course,{upsert:true})
+    //await Soup.deleteMany({})
+    for (soup of soups){
+      const {name,description,season,score,vegetarian,vegan,ingredients,recipe,credits,url}=soup;
+      await Soup.findOneAndUpdate({name,description,season,score,vegetarian,vegan,ingredients,recipe,credits,url},soup,{upsert:true})
     }
-    const num = await Course.find({}).count();
+    const num = await Soup.find({}).count();
     res.send("data uploaded: "+num)
   }
 )
 
-
-app.post('/courses/bySubject',
-  // show list of courses in a given subject
+app.post('/soups/byName',
+  // show list of soups with a given name
   async (req,res,next) => {
-    const {subject} = req.body;
-    const courses = await Course.find({subject:subject,independent_study:false}).sort({term:1,num:1,section:1})
-    
-    res.locals.courses = courses
-    res.locals.strTimes = courses.strTimes
-    //res.json(courses)
-    res.render('courselist')
+    const {name} = req.body;
+    const soups = await Soup.find({name: {'$regex': name}}).sort({score: 1})    
+    res.locals.soups = soups
+    res.render('souplist')
   }
 )
 
-app.get('/courses/show/:courseId',
-  // show all info about a course given its courseid
+app.get('/soups/show/:soupId',
+  // show all info about a soup given its soupid
   async (req,res,next) => {
-    const {courseId} = req.params;
-    const course = await Course.findOne({_id:courseId})
-    res.locals.course = course
-    res.locals.strTimes = courses.strTimes
-    //res.json(course)
-    res.render('course')
+    const {soupid} = req.params;
+    const soup = await Soup.findOne({_id:soupid})
+    res.locals.soup = soup
+    res.render('soup')
   }
 )
 
@@ -317,49 +259,49 @@ app.post('/courses/byKeyword',
 
 app.use(isLoggedIn)
 
-app.get('/addCourse/:courseId',
-  // add a course to the user's schedule
+app.get('/addSoup/:soupId',
+  // add a soup to the user's favorite soups
   async (req,res,next) => {
     try {
-      const courseId = req.params.courseId
+      const soupId = req.params.soupId
       const userId = res.locals.user._id
       // check to make sure it's not already loaded
-      const lookup = await Schedule.find({courseId,userId})
+      const lookup = await FavoriteSoups.find({soupId,userId})
       if (lookup.length==0){
-        const schedule = new Schedule({courseId,userId})
-        await schedule.save()
+        const favoriteSoups = new FavoriteSoups({soupId,userId})
+        await favoriteSoups.save()
       }
-      res.redirect('/schedule/show')
+      res.redirect('/favoriteSoups/show')
     } catch(e){
       next(e)
     }
   })
 
-app.get('/schedule/show',
-  // show the current user's schedule
+app.get('/favoriteSoups/show',
+  // show the current user's favorite soups
   async (req,res,next) => {
     try{
       const userId = res.locals.user._id;
-      const courseIds = 
-         (await Schedule.find({userId}))
-                        .sort(x => x.term)
-                        .map(x => x.courseId)
-      res.locals.courses = await Course.find({_id:{$in: courseIds}})
-      res.render('schedule')
+      const soupIds = 
+         (await FavoriteSoups.find({userId}))
+                        .sort(x => x.score)
+                        .map(x => x.soupId)
+      res.locals.soups = await Soup.find({_id:{$in: soupIds}})
+      res.render('favoriteSoups')
     } catch(e){
       next(e)
     }
   }
 )
 
-app.get('/schedule/remove/:courseId',
+app.get('/favoriteSoups/remove/:soupId',
   // remove a course from the user's schedule
   async (req,res,next) => {
     try {
-      await Schedule.remove(
+      await FavoriteSoups.remove(
                 {userId:res.locals.user._id,
-                 courseId:req.params.courseId})
-      res.redirect('/schedule/show')
+                soupId:req.params.soupId})
+      res.redirect('/favoriteSoups/show')
 
     } catch(e){
       next(e)
@@ -394,6 +336,7 @@ app.set("port", port);
 
 // and now we startup the server listening on that port
 const http = require("http");
+//const { Console } = require("console");
 const server = http.createServer(app);
 
 server.listen(port);
