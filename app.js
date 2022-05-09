@@ -190,8 +190,8 @@ app.get('/upsertDB',
   async (req,res,next) => {
     //await Soup.deleteMany({})
     for (soup of soups){
-      const {name,description,season,score,vegetarian,vegan,ingredients,recipe,credits,url}=soup;
-      await Soup.findOneAndUpdate({name,description,season,score,vegetarian,vegan,ingredients,recipe,credits,url},soup,{upsert:true})
+      const {name,description,season,score,vegetarian,vegan,ingredients,recipe,credits,url} = soup;
+      await Soup.findOneAndUpdate({name,description,season,score,vegetarian,vegan,ingredients,recipe,credits,url}, soup, {upsert:true})
     }
     const num = await Soup.find({}).count();
     res.send("data uploaded: "+num)
@@ -202,7 +202,7 @@ app.post('/soups/byName',
   // show list of soups with a given name
   async (req,res,next) => {
     const {name} = req.body;
-    const soups = await Soup.find({name: {'$regex': name}}).sort({score: 1})    
+    const soups = await Soup.find({name: name}).sort({score: 1})    
     res.locals.soups = soups
     res.render('souplist')
   }
@@ -221,7 +221,7 @@ app.get('/soups/show/:soupId',
 app.post('/soups/bySeason',
   // show list of soups with a given season
   async (req,res,next) => {
-    const {season} = req.body;
+    const { season } = req.body;
     const soups = await Soup.find({season: {'$regex': season}}).sort({score: 1})    
     res.locals.soups = soups
     res.render('souplist')
@@ -236,6 +236,7 @@ app.post('/soups/byVegetarian',
     const soups = await Soup.find({vegetarian:vegetarian}).sort({score: 1})    
     res.locals.soups = soups
     res.render('souplist')
+    
   }
 )
 

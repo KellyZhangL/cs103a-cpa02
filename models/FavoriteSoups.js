@@ -5,7 +5,7 @@ const ObjectId = Schema.Types.ObjectId;
 
 var favoriteSoupsSchema = Schema( {
   userId: ObjectId,
-  recipeId: ObjectId,
+  soupId: ObjectId,
 } );
 
 module.exports = mongoose.model( 'FavoriteSoups', favoriteSoupsSchema );

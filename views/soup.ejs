@@ -1,8 +1,6 @@
 <div class="bg-light m-5 p-2 border border-primary border-2">
     <div class="">
-        <span>
-            <strong><%= soup.name %></strong>
-        </span>
+        <strong><%= soup.name %></strong>
     </div>
     <br>
 
@@ -11,15 +9,19 @@
         <br>
         Soup Score: <%= soup.score %>
         <br>
-        Vegetarian? <%= soup.vegetarian %>,
+        Vegetarian? <%= soup.vegetarian %>
+        <br>
         Vegan? <%= soup.vegan %>
     </div>
     <br>
+
     <div class="p-3">
+        <strong>Description:</strong>
         <em><%=soup.description %></em>
     </div>
     <br>
-    <div class="mb-1">
+
+    <div class="p-3">
         <p>Ingredients</p>
         <ol>
             <% for (const ingredient in soup.ingredients) { %>
@@ -29,6 +31,7 @@
             <% } %>
         </ol>
     </div>
+
     <div>
         <p>Recipe</p>
         <ol>
@@ -39,6 +42,7 @@
             <% } %>
         </ol>
     </div>
+
     <div><a href="/addSoup/<%= soup['_id'] %>">(Add to Favorite Soups)</a></div>
 
 </div>
