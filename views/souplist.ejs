@@ -5,8 +5,9 @@
         <tr>
             <th>Soup Name</th>
             <th>Soup Description</th>
-            <th>Ingredients Needed</th>
-            <th>Recipe Instructions</th>
+            <th>Soup Ratings</th>
+            <th>Season</th>
+            <th>Vegetarian/Vegan?</th>
         </tr>
     </thead>
     <tbody></tbody>
@@ -24,20 +25,17 @@
         </td>
         <td>
             <ol>
-                <% for (const ingredient in soup.ingredients) { %>
-                    <li>
-                        <%= ingredient %>
-                    </li>
-                <% } %>
+                <%= soup.score %>/5
             </ol>
         </td>
         <td>
             <ol>
-                <% for (const number in soup.recipe) { %>
-                    <li>
-                        <%= soup.recipe[number] %>
-                    </li>
-                <% } %>
+                <%= soup.season %>
+            </ol>
+        </td>
+        <td>
+            <ol>
+                <%= soup.vegetarian %>
             </ol>
         </td>
     </tr>
