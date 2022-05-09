@@ -204,9 +204,9 @@ app.get('/upsertDB',
 app.post('/soups/byName',
   // show list of soups with a given keyword in the name
   async (req,res,next) => {
-    const {keyword} = req.body;
-    var regex = new RegExp(keyword, "gi")
-    const soups = await Soup.find({name: regex}).sort({score:1})
+    const {name} = req.body;
+//    var regex = new RegExp(keyword, "gi")
+    const soups = await Soup.find({name: name}).sort({score:1})
     res.locals.soups = soups
     res.render('souplist')
   }

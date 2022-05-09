@@ -1,16 +1,27 @@
+<h1>My Favorite Soups </h1>
+<hr>
 <ul>
-    <div class="d-flex flex-wrap overflow-scroll">
+    <div class="d-flex flex-column overflow-scroll">
         <% for (soup of soups){%>
-            <div class="p-3 m-3 border border-primary bg-light w-25">
+            <div class="p-3 m-3 border border-primary bg-light w-5">
                 <a href="/favoritesoups/remove/<%= soup._id %>">X</a>
                 <strong><a href="/soups/show/<%= soup._id %>"><%= soup.name %></a></strong>
                 <br>
 
                 <div class="p-3">
+                    <strong>Soup Season:</strong>
+                    <%=soup.season %>
+                </div>
+
+                <div class="p-3">
+                    <strong>Soup Rating:</strong>
+                    <%=soup.score %>/5
+                </div>
+
+                <div class="p-3">
                     <strong>Description:</strong>
                     <%=soup.description %>
                 </div>
-                <br>
 
                 <div class ="p-3 m-3 border border-primary bg-light">
                     <p>Ingredients</p>
@@ -22,14 +33,7 @@
                         <% } %>
                     </ol>
                 </div>
-                <br>
 
-                <td>
-                    </br>
-                    Soup Season: <%= soup['season'] %>
-                    </br>
-                    Soup Score: <%= soup['score'] %>
-                </td>
             </div>
         <% } %>
     </div>

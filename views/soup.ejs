@@ -1,28 +1,28 @@
+<h1><%= soup.name %></h1>
+<hr>
 <div class="bg-light m-5 p-2 border border-primary border-2">
-    <div class="">
-        <strong><%= soup.name %></strong>
-    </div>
-    <br>
 
-    <div class="mb-1">
-        Season: <%= soup.season %>
+    <div class ="p-3 m-3 border border-primary bg-light">
+        <strong>Season</strong>: <%= soup.season %>
         <br>
-        Soup Score: <%= soup.score %>
+        <strong>Soup Ratings</strong>: <%= soup.score %>/5
         <br>
-        Vegetarian? <%= soup.vegetarian %>
+        <strong>Vegetarian?</strong> <%= soup.vegetarian %>
         <br>
-        Vegan? <%= soup.vegan %>
+        <strong>Vegan?</strong> <%= soup.vegan %>
     </div>
     <br>
 
     <div class="p-3">
         <strong>Description:</strong>
+        <br><br>
         <%=soup.description %>
     </div>
     <br>
 
     <div class="p-3">
         <strong>Ingredients</strong>
+        <br><br>
         <ol>
             <% for (const ingredient in soup.ingredients) { %>
                 <li>
@@ -34,15 +34,16 @@
 
     <div class="p-3">
         <strong>Recipe</strong>
+        <br><br>
         <ol>
             <% for (const number in soup.recipe) { %>
                 <li>
-                    <%= soup.recipe[number] %>
+                    <%= soup.recipe[number] %><br><br>
                 </li>
             <% } %>
         </ol>
     </div>
 
-    <div><a href="/addSoup/<%= soup['_id'] %>">(Add to Favorite Soups)</a></div>
+    <div><a href="/addSoup/<%= soup['_id'] %>">Add to Favorite Soups</a></div>
 
 </div>
