@@ -57,7 +57,7 @@ db.once('open', function() {console.log("we are connected!!!")});
 const app = express();
 
 // Here we specify that we will be using EJS as our view engine
-app.set("views", path.join(__dirname, "/views"));
+app.set("views", path.join(__dirname, "../views"));
 app.set("view engine", "ejs");
 
 
