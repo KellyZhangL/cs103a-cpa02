@@ -37,9 +37,6 @@ const mongodb_URI = 'mongodb+srv://zhangk:Zp3hpFwFy9zXS57@cluster0.wlp4y.mongodb
 //mongodb+srv://zhangk:<password>@cluster0.wlp4y.mongodb.net/test
 
 const connect = mongoose.connect( mongodb_URI, { useNewUrlParser: true, useUnifiedTopology: true } );
-connect.then((db) => {
-  console.log('Connected correctly to server');
-}, (err) => { console.log(err) });
 // fix deprecation warnings
 mongoose.set('useFindAndModify', false); 
 mongoose.set('useCreateIndex', true);
@@ -60,7 +57,7 @@ db.once('open', function() {console.log("we are connected!!!")});
 const app = express();
 
 // Here we specify that we will be using EJS as our view engine
-app.set("views", path.join(__dirname, "views"));
+app.set("views", path.join(__dirname, "/views"));
 app.set("view engine", "ejs");
 
 
@@ -205,8 +202,8 @@ app.post('/soups/byName',
   // show list of soups with a given keyword in the name
   async (req,res,next) => {
     const {name} = req.body;
-//    var regex = new RegExp(keyword, "gi")
-    const soups = await Soup.find({name: name}).sort({score:1})
+    var regex = new RegExp(name, "gi")
+    const soups = await Soup.find({name: regex}).sort({score:1})
     res.locals.soups = soups
     res.render('souplist')
   }
@@ -216,10 +213,7 @@ app.get('/soups/show/:soupId',
   // show all info about a soup given its soupid
   async (req,res,next) => {
     const {soupId} = req.params;
-    // console.log(req.params);
-    // console.log(soupId);
     const soup = await Soup.findOne({_id:soupId})
-    // console.log(soup);
     res.locals.soup = soup
     res.render('soup')
   }
@@ -294,14 +288,12 @@ app.get('/addSoup/:soupId',
 app.get('/favoriteSoups/show',
   // show the current user's favorite soups
   async (req,res,next) => {
-    console.log('in favorite soups');
     try{
       const userId = res.locals.user._id;
       const soupIds = 
          (await FavoriteSoups.find({userId}))
                         .sort(x => x.score)
                         .map(x => x.soupId)
-      //console.log(soupIds);
       res.locals.soups = await Soup.find({_id:{$in: soupIds}})
       res.render('favoriteSoups')
     } catch(e){
