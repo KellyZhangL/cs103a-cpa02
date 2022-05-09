@@ -279,13 +279,13 @@ app.get('/addSoup/:soupId',
         const favoriteSoups = new FavoriteSoups({soupId,userId})
         await favoriteSoups.save()
       }
-      res.redirect('/favoriteSoups/show')
+      res.redirect('/favoritesoups/show')
     } catch(e){
       next(e)
     }
   })
 
-app.get('/favoriteSoups/show',
+app.get('/favoritesoups/show',
   // show the current user's favorite soups
   async (req,res,next) => {
     try{
@@ -295,21 +295,21 @@ app.get('/favoriteSoups/show',
                         .sort(x => x.score)
                         .map(x => x.soupId)
       res.locals.soups = await Soup.find({_id:{$in: soupIds}})
-      res.render('favoriteSoups')
+      res.render('favoritesoups')
     } catch(e){
       next(e)
     }
   }
 )
 
-app.get('/favoriteSoups/remove/:soupId',
+app.get('/favoritesoups/remove/:soupId',
   // remove a course from the user's schedule
   async (req,res,next) => {
     try {
       await FavoriteSoups.remove(
                 {userId:res.locals.user._id,
                 soupId:req.params.soupId})
-      res.redirect('/favoriteSoups/show')
+      res.redirect('/favoritesoups/show')
 
     } catch(e){
       next(e)
