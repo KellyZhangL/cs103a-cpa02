@@ -33,10 +33,13 @@ const soups = require('./public/data/soups.json')
 // *********************************************************** //
 
 const mongoose = require( 'mongoose' );
-const mongodb_URI = 'mongodb+srv://cs_sj:BrandeisSpr22@cluster0.kgugl.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
+const mongodb_URI = 'mongodb+srv://zhangk:Zp3hpFwFy9zXS57@cluster0.wlp4y.mongodb.net/soups?retryWrites=true&w=majority'
 //mongodb+srv://zhangk:<password>@cluster0.wlp4y.mongodb.net/test
 
-mongoose.connect( mongodb_URI, { useNewUrlParser: true, useUnifiedTopology: true } );
+const connect = mongoose.connect( mongodb_URI, { useNewUrlParser: true, useUnifiedTopology: true } );
+connect.then((db) => {
+  console.log('Connected correctly to server');
+}, (err) => { console.log(err) });
 // fix deprecation warnings
 mongoose.set('useFindAndModify', false); 
 mongoose.set('useCreateIndex', true);
@@ -199,10 +202,11 @@ app.get('/upsertDB',
 )
 
 app.post('/soups/byName',
-  // show list of soups with a given name
+  // show list of soups with a given keyword in the name
   async (req,res,next) => {
-    const {name} = req.body;
-    const soups = await Soup.find({name: name}).sort({score: 1})    
+    const {keyword} = req.body;
+    var regex = new RegExp(keyword, "gi")
+    const soups = await Soup.find({name: regex}).sort({score:1})
     res.locals.soups = soups
     res.render('souplist')
   }
@@ -211,8 +215,11 @@ app.post('/soups/byName',
 app.get('/soups/show/:soupId',
   // show all info about a soup given its soupid
   async (req,res,next) => {
-    const {soupid} = req.params;
-    const soup = await Soup.findOne({_id:soupid})
+    const {soupId} = req.params;
+    // console.log(req.params);
+    // console.log(soupId);
+    const soup = await Soup.findOne({_id:soupId})
+    // console.log(soup);
     res.locals.soup = soup
     res.render('soup')
   }
@@ -236,7 +243,7 @@ app.post('/soups/byVegetarian',
     const soups = await Soup.find({vegetarian:vegetarian}).sort({score: 1})    
     res.locals.soups = soups
     res.render('souplist')
-    
+
   }
 )
 
@@ -251,18 +258,7 @@ app.post('/soups/byVegan',
   }
 )
 
-app.post('/soups/byKeyword',
-    // show list of soups with a given keyword
-    async(req, res, next) => {
-        const { keyword } = req.body;
-        var regex = new RegExp(keyword, "gi")
-        const soups = await Soup.find({name: regex}).sort({score:1})
-        res.locals.soups = soups
-        res.render('souplist')
-    }
-)
-
-app.post('/soups/byIngr',
+app.post('/soups/byIngredient',
   // show soups by ingredient send from a form
   async (req,res,next) => {
     const {ingredient} = req.body;
@@ -298,12 +294,14 @@ app.get('/addSoup/:soupId',
 app.get('/favoriteSoups/show',
   // show the current user's favorite soups
   async (req,res,next) => {
+    console.log('in favorite soups');
     try{
       const userId = res.locals.user._id;
       const soupIds = 
          (await FavoriteSoups.find({userId}))
                         .sort(x => x.score)
                         .map(x => x.soupId)
+      //console.log(soupIds);
       res.locals.soups = await Soup.find({_id:{$in: soupIds}})
       res.render('favoriteSoups')
     } catch(e){
@@ -354,7 +352,7 @@ app.set("port", port);
 
 // and now we startup the server listening on that port
 const http = require("http");
-//const { Console } = require("console");
+const { Console } = require("console");
 const server = http.createServer(app);
 
 server.listen(port);

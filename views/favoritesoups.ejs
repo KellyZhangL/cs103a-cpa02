@@ -5,19 +5,25 @@
                 <a href="/favoritesoups/remove/<%= soup._id %>">X</a>
                 <strong><a href="/soups/show/<%= soup._id %>"><%= soup.name %></a></strong>
                 <br>
-                <%= soup.
+
+                <div class="p-3">
+                    <strong>Description:</strong>
+                    <%=soup.description %>
+                </div>
+                <br>
+
                 <div class ="p-3 m-3 border border-primary bg-light">
-                    Ingredients: 
-                    <br>
-                    <br>
+                    <p>Ingredients</p>
                     <ol>
                         <% for (const ingredient in soup.ingredients) { %>
-                            <li><%= ingredient %></li>
+                            <li>
+                                <%= ingredient %>
+                            </li>
                         <% } %>
                     </ol>
                 </div>
                 <br>
-                Description: <%= soup['description'] %>
+
                 <td>
                     </br>
                     Soup Season: <%= soup['season'] %>

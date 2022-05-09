@@ -17,12 +17,12 @@
 
     <div class="p-3">
         <strong>Description:</strong>
-        <em><%=soup.description %></em>
+        <%=soup.description %>
     </div>
     <br>
 
     <div class="p-3">
-        <p>Ingredients</p>
+        <strong>Ingredients</strong>
         <ol>
             <% for (const ingredient in soup.ingredients) { %>
                 <li>
@@ -32,8 +32,8 @@
         </ol>
     </div>
 
-    <div>
-        <p>Recipe</p>
+    <div class="p-3">
+        <strong>Recipe</strong>
         <ol>
             <% for (const number in soup.recipe) { %>
                 <li>
