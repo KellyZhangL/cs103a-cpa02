@@ -27,9 +27,9 @@ nodemon
 ```
 
 ## Demo
-Live Demo:
+##### Live Demo:
 
-Follow Along with Screenshots:
+##### Follow Along with Screenshots:
 From the Home Page, you can search for soups by name, season, vegetarian/vegan, or by ingredient.
 ![image](https://user-images.githubusercontent.com/83798182/167351474-3d10cb20-9459-4337-88dd-d9379fe524b5.png)
 
