@@ -1,6 +1,6 @@
-# CPA02: Soup Recipe & Reviews
+# CPA02: Soup Recipes & Reviews
 
-This website is a soup recipe blog with soups that I have rated and reviewed. You can search for soups by season, whether the soup is vegetarian or vegan, by ingredients, and by overall ratings. Each soup also comes with the original recipe and credited with where it was found. Users can create an account on this site and save their favorite soup recipes. In the future, I hope to implement a feature to allow users to add their own comments and ratings to each soup recipe, as well as a "Would Try Again" button.
+This website is a soup recipe blog with soups that I have rated and reviewed. You can search for soups by season, whether the soup is vegetarian or vegan, by ingredients, and by overall ratings. Each soup also contains recipe and ingredient details, so users can try them out at home. Users can create an account on this site and save their favorite soup recipes. In the future, I hope to implement a feature to allow users to add their own comments and ratings to each soup recipe, as well as a "Would Try Again" button.
 
 ## Motivation 
 A large fraction of software development involves designing, implementing, deploying, and monitoring interactive database backed web applications.  PA03 gave you some experience making modifications to such an application, but it will help your future career to have an app that you personally have developed, starting from the PA03 base.
@@ -28,6 +28,7 @@ nodemon
 
 ## Demo
 #### Live Demo:
+https://brandeis.zoom.us/rec/share/Hc4G3qhJYfWVjUqM4xaYak2UeyV8m2VEPC7VwlCriLcTz6PEEPNnCQacyResXn7S.ZNFfU3CLisCWpfyV?startTime=1652100306000
 
 #### Follow Along with Screenshots:
 From the Home Page, you can search for soups by name, season, vegetarian/vegan, or by ingredient.
