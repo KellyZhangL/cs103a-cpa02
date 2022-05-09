@@ -27,6 +27,18 @@ nodemon
 ```
 
 ## Demo
-Live Demo:
+#### Live Demo:
 
-Follow Along with Screenshots:
+#### Follow Along with Screenshots:
+From the Home Page, you can search for soups by name, season, vegetarian/vegan, or by ingredient.
+![image](https://user-images.githubusercontent.com/83798182/167351474-3d10cb20-9459-4337-88dd-d9379fe524b5.png)
+
+Searching for winter soups will bring you to the following page:
+![image](https://user-images.githubusercontent.com/83798182/167352391-433f84ae-018b-457e-ac81-8436c7ea6f63.png)
+
+Click on "Egg Drop Soup" to learn more about the soup:
+![image](https://user-images.githubusercontent.com/83798182/167351825-3686e9d6-bdff-4891-a272-ec05389a6322.png)
+
+Clicking on "Add to Favorite Soups" will allow you to save the soup. You can revisit it by clicking on "Show Favorite Soups" in the Home Page, which will bring you here:
+![image](https://user-images.githubusercontent.com/83798182/167352636-b6caeb2f-82f1-4d29-8eaf-58f3b20e5b8a.png)
+
